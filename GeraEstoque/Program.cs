@@ -2,18 +2,30 @@
 {
     internal class Program
     {
+        public string[] products; 
+        static void CadastrarProduto()
+        {
+            Console.Clear();
+            Console.Write("Insira o produto: ");
+            var product = Console.ReadLine();
+        }
         static void Main(string[] args)
         {
-            Console.WriteLine("Seja bem vindo ao GeraEstoque 1.0");
-            Console.WriteLine("----------------------------------------");
-            Console.WriteLine("1  Cadastrar produto");
-            Console.WriteLine("2  Consultar produto");
-            Console.WriteLine("3  Modificar produto");
-            Console.WriteLine("4  Excluir produto");
-            Console.WriteLine("0  Sair");
-            Console.WriteLine("");
-            Console.Write("Digite a opção: ");
-            Console.Read();
+            string textoMenu = @"Seja bem vindo ao GeraEstoque 1.0
+----------------------------------------
+1  Cadastrar produto
+2  Consultar produto
+3  Modificar produto
+4  Excluir produto
+0  Sair
+Digite a opção: ";
+            Console.Write(textoMenu);
+            var option = byte.Parse(Console.ReadLine());
+
+            switch (option)
+            {
+                case 1: CadastrarProduto(); break;
+            }
         }
     }
 }
