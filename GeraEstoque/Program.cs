@@ -25,7 +25,7 @@
             ");
 
         }
-        static void Main(string[] args)
+        static void Menu()
         {
             string textoMenu = @"Seja bem vindo ao GeraEstoque 1.0
 ----------------------------------------
@@ -41,8 +41,25 @@ Digite a opção: ";
 
             switch (option)
             {
-                case 1: CadastrarProduto(); break;
+                case 0:
+                    break;
+                case 1: 
+                    CadastrarProduto(); 
+                    break;
+                case 2: 
+                case 3: 
+                case 4:
+                    Menu();
+                    break;
+                default: 
+                    Console.Write("Opção inválida");
+                    Menu();
+                    break;
             }
+        }
+        static void Main(string[] args)
+        {
+            Menu();
         }
     }
 }
