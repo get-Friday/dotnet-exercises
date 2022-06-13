@@ -2,12 +2,17 @@
 {
     internal class Program
     {
-        public string[] products; 
         static void CadastrarProduto()
         {
             Console.Clear();
-            Console.Write("Insira o produto: ");
-            var product = Console.ReadLine();
+            Console.Write("Insira o nome do produto: ");
+            string product = Console.ReadLine();
+            Console.WriteLine("");
+            Console.Write("Sua quantidade em estoque: ");
+            int qntStock = int.Parse(Console.ReadLine());
+            Console.WriteLine("");
+            Console.Write("Seu valor de compra: ");
+            float price = float.Parse(Console.ReadLine());
         }
         static void Main(string[] args)
         {
@@ -19,6 +24,7 @@
 4  Excluir produto
 0  Sair
 Digite a opção: ";
+            Console.Clear();
             Console.Write(textoMenu);
             var option = byte.Parse(Console.ReadLine());
 
