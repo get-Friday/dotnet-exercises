@@ -13,6 +13,17 @@
             Console.WriteLine("");
             Console.Write("Seu valor de compra: ");
             float price = float.Parse(Console.ReadLine());
+
+            Guid obj = Guid.NewGuid();
+
+            Console.WriteLine("");
+            Console.Write(@$"Produto Cadastrado com sucesso!
+            ID: {obj};
+            Nome: {product};
+            Qtd: {qntStock};
+            R$ Compra: R$ {price};
+            ");
+
         }
         static void Main(string[] args)
         {
