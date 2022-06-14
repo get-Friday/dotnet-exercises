@@ -21,7 +21,7 @@
             ID: {obj};
             Nome: {product};
             Qtd: {qntStock};
-            R$ Compra: R$ {price};
+            R$ Compra: {price.ToString("C")};
             ");
 
         }
