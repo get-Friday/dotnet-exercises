@@ -3,4 +3,5 @@ Esses exercícios são para aprender C# a fim de backend para desenvolvimento we
 
 ## Semanas
 
-1. [Gera Estoque](https://github.com/get-Friday/dotnet-exercises/tree/week1)
+1. [Gera Estoque v1](https://github.com/get-Friday/dotnet-exercises/tree/week1)
+2. [Gera Estoque v2](https://github.com/get-Friday/dotnet-exercises/tree/week2)
