@@ -1,2 +1,2 @@
 # dotnet-exercises
-Exercícios da semana 1: GeraEstoque.
+Exercícios da semana 2: GeraEstoque v2.
