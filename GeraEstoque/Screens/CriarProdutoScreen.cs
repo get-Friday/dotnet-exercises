@@ -1,29 +1,32 @@
-namespace GeraEstoque.Screens
+using GeraEstoque.Repositories;
+using GeraEstoque.Models;
+
+namespace GeraEstoque.Screens;
+
+class CriarProdutoScreen
 {
-    class CriarProdutoScreen
+    public static void Iniciar(ProdutoRepository repository)
     {
-        public static void Iniciar()
-        {
-            Console.Clear();
-            Console.Write("Insira o nome do produto: ");
-            string product = Console.ReadLine();
-            Console.WriteLine("");
-            Console.Write("Sua quantidade em estoque: ");
-            int qntStock = int.Parse(Console.ReadLine());
-            Console.WriteLine("");
-            Console.Write("Seu valor de compra: ");
-            float price = float.Parse(Console.ReadLine());
+        Console.Clear();
+        Console.Write("Insira o nome do produto: ");
+        string nome = Console.ReadLine();
+        Console.WriteLine("");
+        Console.Write("Sua quantidade em estoque: ");
+        int quantidade = int.Parse(Console.ReadLine());
+        Console.WriteLine("");
+        Console.Write("Seu valor de compra: ");
+        decimal custo = decimal.Parse(Console.ReadLine());
+        Console.WriteLine("");
+        Console.Write("Seu valor de venda: ");
+        decimal venda = decimal.Parse(Console.ReadLine());
 
-            Guid obj = Guid.NewGuid();
+        Guid obj = Guid.NewGuid();
 
-            Console.WriteLine("");
-            Console.Write(@$"Produto Cadastrado com sucesso!
-            ID: {obj};
-            Nome: {product};
-            Qtd: {qntStock};
-            R$ Compra: {price.ToString("C")};
-            ");
+        Produto produto = new Produto(nome!, quantidade, custo, venda);
 
-        }
+        Console.WriteLine("");
+        Console.WriteLine("Produto adicionado!");
+        repository.Produtos.Add(produto);
+
     }
 }

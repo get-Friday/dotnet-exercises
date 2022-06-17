@@ -3,10 +3,10 @@ namespace GeraEstoque.Repositories
 {
     class ProdutoRepository
     {
-        public IList<Produto> Produtos;
-        public ProdutoRepository(Produto produtos)
+        public IList<Produto> Produtos { get; set; }
+        public ProdutoRepository()
         {
-            Produtos.Add(produtos);
+            Produtos = new List<Produto>();
         }
     }
 }

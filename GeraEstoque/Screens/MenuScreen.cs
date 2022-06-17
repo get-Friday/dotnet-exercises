@@ -1,10 +1,12 @@
-namespace GeraEstoque.Screens
+using GeraEstoque.Repositories;
+
+namespace GeraEstoque.Screens;
+
+class MenuScreen
 {
-    class MenuScreen
+    public static void Iniciar(ProdutoRepository repository)
     {
-        public static void Iniciar()
-        {
-            string textoMenu = @"Seja bem vindo ao GeraEstoque 1.0
+        string textoMenu = @"Seja bem vindo ao GeraEstoque 1.0
 ----------------------------------------
 1  Cadastrar produto
 2  Consultar produto
@@ -12,17 +14,17 @@ namespace GeraEstoque.Screens
 4  Excluir produto
 0  Sair
 Digite a opção: ";
-            Console.Clear();
-            Console.Write(textoMenu);
-            var option = byte.Parse(Console.ReadLine());
+        Console.Clear();
+        Console.Write(textoMenu);
+        var option = byte.Parse(Console.ReadLine());
 
-            switch (option)
-            {
-                case 1:
-                    CriarProdutoScreen.Iniciar(); Iniciar(); break;
-                default:
-                    Environment.Exit(0); break;
-            }
+        switch (option)
+        {
+            case 1:
+                CriarProdutoScreen.Iniciar(repository); Iniciar(repository); break;
+            default:
+                Environment.Exit(0); break;
         }
     }
 }
+

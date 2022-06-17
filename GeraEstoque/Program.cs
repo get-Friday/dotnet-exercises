@@ -1,12 +1,13 @@
 ﻿using GeraEstoque.Screens;
+using GeraEstoque.Repositories;
 
-namespace GeraEstoque
+namespace GeraEstoque;
+
+internal class Program
 {
-    internal class Program
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
-        {
-            MenuScreen.Iniciar();
-        }
+        var repo = new ProdutoRepository();
+        MenuScreen.Iniciar(repo);
     }
 }

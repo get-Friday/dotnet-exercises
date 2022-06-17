@@ -1,7 +1,6 @@
-namespace GeraEstoque.Screens
+namespace GeraEstoque.Screens;
+
+class ListarProdutosScreen
 {
-    class ListarProdutosScreen
-    {
-        
-    }
+    
 }
