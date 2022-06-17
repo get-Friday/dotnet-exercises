@@ -1,9 +1,9 @@
-namespace GeraEstoque.Screens;
-
-class CriarProdutoScreen
+namespace GeraEstoque.Screens
 {
-    public static void Iniciar()
+    class CriarProdutoScreen
     {
+        public static void Iniciar()
+        {
             Console.Clear();
             Console.Write("Insira o nome do produto: ");
             string product = Console.ReadLine();
@@ -24,5 +24,6 @@ class CriarProdutoScreen
             R$ Compra: {price.ToString("C")};
             ");
 
+        }
     }
 }
