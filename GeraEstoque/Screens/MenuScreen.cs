@@ -18,44 +18,11 @@ Digite a opção: ";
 
             switch (option)
             {
-                case 0:
-                    break;
                 case 1:
-                    CadastrarProduto();
-                    break;
-                case 2:
-                case 3:
-                case 4:
-                    Iniciar();
-                    break;
+                    CriarProdutoScreen.Iniciar(); Iniciar(); break;
                 default:
-                    Console.Write("Opção inválida");
-                    Iniciar();
-                    break;
+                    Environment.Exit(0); break;
             }
-        }
-        static void CadastrarProduto()
-        {
-            Console.Clear();
-            Console.Write("Insira o nome do produto: ");
-            string product = Console.ReadLine();
-            Console.WriteLine("");
-            Console.Write("Sua quantidade em estoque: ");
-            int qntStock = int.Parse(Console.ReadLine());
-            Console.WriteLine("");
-            Console.Write("Seu valor de compra: ");
-            float price = float.Parse(Console.ReadLine());
-
-            Guid obj = Guid.NewGuid();
-
-            Console.WriteLine("");
-            Console.Write(@$"Produto Cadastrado com sucesso!
-            ID: {obj};
-            Nome: {product};
-            Qtd: {qntStock};
-            R$ Compra: {price.ToString("C")};
-            ");
-
         }
     }
 }
