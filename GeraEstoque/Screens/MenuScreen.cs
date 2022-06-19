@@ -12,6 +12,7 @@ class MenuScreen
 2  Consultar produto
 3  Modificar produto
 4  Excluir produto
+5  Listar todos os produtos
 0  Sair
 Digite a opção: ";
         Console.Clear();
@@ -22,6 +23,8 @@ Digite a opção: ";
         {
             case 1:
                 CriarProdutoScreen.Iniciar(repository); Iniciar(repository); break;
+            case 5:
+                ListarProdutosScreen.Iniciar(repository); Iniciar(repository); break;
             default:
                 Environment.Exit(0); break;
         }
